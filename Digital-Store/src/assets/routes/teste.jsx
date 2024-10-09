@@ -5,5 +5,4 @@ const teste = () => {
     );
 }
 
-export default teste; <>
-</>
+export default teste;
