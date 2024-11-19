@@ -1,12 +1,12 @@
 
 import './App.css'
-import Teste from './assets/routes/Teste'
+import { PrivateRoutes } from './routes/PrivateRoutes'
 
 function App() {
 
   return (
     <>
-      <Teste/>
+      <PrivateRoutes/>
     </>
   )
 }
