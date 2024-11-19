@@ -1,21 +1,14 @@
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import { Section } from "../components/Section";
 
 const HomePage = () => {
     return (
         <>
-        <Input 
-        type="email"
-        label={"Email"}
-        id={"email"}
-        placeholder={"Digite seu email"}
-        className={"w-6/12"}
-        />
+        <Section
+         title={"Produtos em Alta"}
+         
 
-        <Button
-        labelColor={"white"}
-        label={"Entrar"}
-        color={"[var(--primary)]"}
         />
         </>
      );
