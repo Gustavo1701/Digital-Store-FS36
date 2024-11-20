@@ -9,7 +9,7 @@ export const PrivateRoutes = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           
-          {/* Rota para qualquer URL não definida, redirecionando para a home */}
+          {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
