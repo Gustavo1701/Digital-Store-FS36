@@ -7,6 +7,7 @@ import {
 import HomePage from "../Pages/HomePage";
 import Layout, { SimpleLayout } from "../components/Layout";
 import { CreateAccountPage } from "../Pages/CreateAccountPage";
+import NotFoundPage from "../Pages/NotFoundPage";
 
 export const PrivateRoutes = () => {
   return (
@@ -20,10 +21,9 @@ export const PrivateRoutes = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<CreateAccountPage />} />
-
-          {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
-          <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
+        {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </Router>
   );
