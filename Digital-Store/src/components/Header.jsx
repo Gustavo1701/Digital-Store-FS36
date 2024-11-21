@@ -12,10 +12,10 @@ const Header = () => {
         <div className="w-[70%]">
           <div className="flex justify-center items-center gap-8 px-4">
             {/* Logo Section */}
-            <div className="flex items-center gap-1">
+            <Link className="flex items-center  gap-1" to={"/"}>
               <img src={iconLogo} alt="Ícone da Marca" />
               <img className="mt-1.5" src={logo} alt="Logo da Marca" />
-            </div>
+            </Link>
 
             {/* Search Input */}
             <div className="relative flex-1">
@@ -77,14 +77,13 @@ const Header = () => {
 
 export default Header;
 
-
 export const SimpleHeader = () => {
   return (
-    <header className="w-full pl-10 h-24 pt-5">
-      <div className="flex items-center  gap-1">
+    <header className="w-full flex pl-36 align-middle h-24">
+      <Link className="flex items-center  gap-1" to={"/"}>
         <img src={iconLogo} alt="Ícone da Marca" />
         <img className="mt-1.5" src={logo} alt="Logo da Marca" />
-      </div>
+      </Link>
     </header>
   );
 };
