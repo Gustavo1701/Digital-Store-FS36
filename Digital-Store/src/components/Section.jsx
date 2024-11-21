@@ -11,7 +11,7 @@ export const Section = ({title, titleAlign = "left", children}) => {
             <p className={`text-2xl text-[var(--dark-gray-2)] ${titleAlign === "center" ? "mx-auto text-center" : ""}`}>
                     {title}
                 </p>
-                <Link className="text-[var(--primary)] text-lg" to={link.href}>
+                <Link className="text-[var(--primary)] text-lg hover:font-semibold" to={link.href}>
                     {link.text} &#129046;
                 </Link>
             </div>
