@@ -19,7 +19,8 @@ export const PrivateRoutes = () => {
         </Route>
         {/* Pages WebApp */}
         <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Navigate to={"/home"} />} />
+          <Route path="/home" element={<HomePage />} />
           <Route path="/register" element={<CreateAccountPage />} />
         </Route>
         {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}

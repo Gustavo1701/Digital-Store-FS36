@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import iconLogo from "../assets/vector.png";
 import search from "../assets/Search.png";
@@ -6,6 +6,12 @@ import buy from "../assets/Buy.png";
 import { Logo } from "./Logo";
 
 const Header = () => {
+  const location = useLocation();
+
+  // Função para verificar se a rota está ativa
+  const isActive = (path) => location.pathname === path;
+
+
   return (
     <header>
       <div className="w-full h-[190px] flex justify-center py-6  gap-8">
@@ -40,23 +46,48 @@ const Header = () => {
           <nav>
             <ul className="flex gap-8 ml-4 mt-16">
               <li>
-                <Link className="font-normal text-[var(--dark-gray)] hover:text-[var(--primary)] hover:font-semibold hover:underline ">
-                  Home
+                <Link to={"/home"} className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
+                  
+                  <div
+                    className={`mt-1 border-b ${
+                      isActive("/home")
+                        ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
+                        : "border-white"
+                    }`}
+                  >Home</div>
                 </Link>
               </li>
               <li>
-                <Link className="font-normal text-[var(--dark-gray)] hover:text-[var(--primary)] hover:font-semibold hover:underline ">
-                  Produtos
+                <Link className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
+                  <div
+                    className={`mt-1 border-b ${
+                      isActive("/produtos")
+                        ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
+                        : "border-white"
+                    }`}
+                  >Produtos</div>
                 </Link>
               </li>
               <li>
-                <Link className="font-normal text-[var(--dark-gray)] hover:text-[var(--primary)] hover:font-semibold hover:underline ">
-                  Categorias
+                <Link className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
+                  <div
+                    className={`mt-1 border-b ${
+                      isActive("/categorias")
+                        ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
+                        : "border-white"
+                    }`}
+                  >Categorias</div>
                 </Link>
               </li>
               <li>
-                <Link className="font-normal text-[var(--dark-gray)] hover:text-[var(--primary)] hover:font-semibold hover:underline ">
-                  Meus Pedidos
+                <Link className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
+                  <div
+                    className={`mt-1 border-b ${
+                      isActive("/meus-pedidos")
+                        ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
+                        : "border-white"
+                    }`}
+                  >Meus Pedidos</div>
                 </Link>
               </li>
             </ul>
