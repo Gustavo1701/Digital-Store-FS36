@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
-import Header from "./Header";
+import Header, { SimpleHeader } from "./Header";
 
 const Layout = () => {
   return (
@@ -13,3 +13,13 @@ const Layout = () => {
 };
 
 export default Layout;
+
+export const SimpleLayout = () => {
+  return (
+    <>
+      <SimpleHeader />
+      <Outlet />
+      <Footer />
+    </>
+  );
+};

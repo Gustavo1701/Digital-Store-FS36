@@ -1,14 +1,12 @@
 import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
-import HomePage from "../Pages/HomePage";
-import Layout from "../components/Layout";
+import { SimpleLayout } from "../components/Layout";
 import { CreateAccountPage } from "../Pages/CreateAccountPage";
 
-export const PrivateRoutes = () => {
+export const PublicRoutes = () => {
   return (
     <Router>
       <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
+        <Route element={<SimpleLayout />}>
           <Route path="/register" element={<CreateAccountPage />} />
           
           {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}

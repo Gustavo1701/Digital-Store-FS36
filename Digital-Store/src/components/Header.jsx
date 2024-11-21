@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import iconLogo from "../assets/vector.png";
 import search from "../assets/Search.png";
 import buy from "../assets/Buy.png";
+import { Logo } from "./Logo";
 
 const Header = () => {
   return (
@@ -28,10 +29,11 @@ const Header = () => {
                 alt="Search"
                 className="absolute right-4 cursor-pointer top-1/2 transform -translate-y-1/2 w-5"
               />
-              
             </div>
             {/* Register Link */}
-            <Link className="underline">Cadastre-se</Link>
+            <Link className="underline" to={"/register"}>
+              Cadastre-se
+            </Link>
           </div>
 
           {/* Navigations Links */}
@@ -74,3 +76,15 @@ const Header = () => {
 };
 
 export default Header;
+
+
+export const SimpleHeader = () => {
+  return (
+    <header className="w-full pl-10 h-24 pt-5">
+      <div className="flex items-center  gap-1">
+        <img src={iconLogo} alt="Ícone da Marca" />
+        <img className="mt-1.5" src={logo} alt="Logo da Marca" />
+      </div>
+    </header>
+  );
+};

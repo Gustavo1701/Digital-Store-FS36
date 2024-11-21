@@ -1,19 +1,16 @@
 import { Link } from "react-router-dom";
 
-export const Section = ({title, titleAlign = "left", children}) => {
-    const link = {
-        text: "Ver todos",
-        href: "/produtos"
-    }
+export const Section = ({className, title, titleSize = "text-2xl", titleAlign = "left", children, link}) => {
+
     return ( 
-        <section>
+        <section className={className}>
             <div className="flex items-center justify-between">
-            <p className={`text-2xl text-[var(--dark-gray-2)] ${titleAlign === "center" ? "mx-auto text-center" : ""}`}>
+            <p className={`${titleSize} text-[var(--dark-gray-2)] font-semibold ${titleAlign === "center" ? "mx-auto text-center" : ""}`}>
                     {title}
                 </p>
-                <Link className="text-[var(--primary)] text-lg hover:font-semibold" to={link.href}>
+                {link && <Link className="text-[var(--primary)] text-lg hover:font-semibold" to={link.href}>
                     {link.text} &#129046;
-                </Link>
+                </Link>}
             </div>
             <div className="mt-4">
                 {children}

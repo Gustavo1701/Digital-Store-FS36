@@ -65,7 +65,7 @@ const Footer = () => {
     },
   ];
   return (
-    <footer className="grid fixed grid-cols-4 gap-x-10 bottom-0 bg-[var(--dark-gray)] h-[445px] px-[9%] pt-16">
+    <footer className="grid grid-cols-4 gap-x-10 bottom-0 bg-[var(--dark-gray)] h-[445px] px-[9%] pt-16">
       <div className="space-y-8">
         <div className="flex items-center gap-3">
           <LogoIconBranco />
