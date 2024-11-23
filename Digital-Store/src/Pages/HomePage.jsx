@@ -1,6 +1,7 @@
 import Gallery from "../components/Gallery";
+import { ProductCard } from "../components/ProductCard";
 import { Section } from "../components/Section";
-
+import product from "../../public/produc-image-5.jpeg"
 const HomePage = () => {
     return (
         <>
