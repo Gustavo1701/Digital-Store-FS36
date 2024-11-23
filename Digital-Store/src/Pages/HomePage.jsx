@@ -2,6 +2,7 @@ import Gallery from "../components/Gallery";
 import { Section } from "../components/Section";
 import SpecialOffer from "../components/SpecialOffer";
 
+
 const HomePage = () => {
     return (
         <>
