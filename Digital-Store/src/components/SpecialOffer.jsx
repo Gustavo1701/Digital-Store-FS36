@@ -3,20 +3,21 @@ import ellipse from "../assets/Ellipse.png";
 
 function SpecialOffer() {
     return (
-      <section className="w-full flex-wrap flex justify-evenly p-10 mt-20 lg:mt-48 mb-20 items-center">
-        <div className="relative mx-auto mb-20">
+      <section className="w-full flex flex-col lg:flex-row justify-center items-center p-10 mt-10 lg:mt-20 mb-10">
+        <div className="relative mx-auto mb-10 lg:mb-0">
           
           <img
             src={banner}
             alt="oferta especial"
-            className="w-[500px] lg:w-[600px] relative z-20" 
+            className="w-[500px] lg:w-[600px] relative z-20"
           />
           
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-            <img src={ellipse} alt="elipse" className="w-[600px] lg:w-[600px]" /> 
+            <img src={ellipse} alt="elipse" className="w-[600px] lg:w-[650px]" />
           </div>
         </div>
-        <div className="flex flex-col max-w-[514px] gap-y-6 lg:gap-y-4">
+        
+        <div className="flex flex-col max-w-[600px] lg:ml-10 text-center lg:text-left gap-y-4">
           <span className="text-[var(--warning)] lg:text-[var(--primary)] leading-[24px] tracking-[.75px] font-inter text-[16px] font-[700]">
             Oferta especial
           </span>
