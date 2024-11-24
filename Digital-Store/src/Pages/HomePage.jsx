@@ -1,15 +1,10 @@
+import Destaque from "../components/Collection-Destaque";
 import Gallery from "../components/Gallery";
 import { Section } from "../components/Section";
 
 const HomePage = () => {
     return (
         <>
-            <Section
-                title={"Produtos em Alta"}
-
-
-            />
-
             <Gallery
                 slides={[
                     '../public/home-slide-1.jpeg',
@@ -21,6 +16,8 @@ const HomePage = () => {
                     '../public/home-slide-8.jpeg',
                 ]}
             />
+
+            <Destaque/>
         </>
     );
 }
