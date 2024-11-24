@@ -22,11 +22,13 @@ export const PrivateRoutes = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/teste" element={<Teste />} />
           <Route path="/register" element={<CreateAccountPage />} />
         </Route>
         {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
         <Route path="*" element={<NotFoundPage />} />
+        
+        {/* Rota de testes */}
+        <Route path="/teste" element={<Teste />} />
       </Routes>
     </Router>
   );

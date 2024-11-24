@@ -11,7 +11,6 @@ const Header = () => {
   // Função para verificar se a rota está ativa
   const isActive = (path) => location.pathname === path;
 
-
   return (
     <header>
       <div className="w-full h-[190px] flex justify-center py-6  gap-8">
@@ -47,7 +46,7 @@ const Header = () => {
             <ul className="flex gap-8 ml-4 mt-16">
               <li>
                 <Link to={"/home"} className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
-                  
+
                   <div
                     className={`mt-1 border-b ${
                       isActive("/home")
