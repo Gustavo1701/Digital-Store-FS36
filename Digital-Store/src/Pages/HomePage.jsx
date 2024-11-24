@@ -1,3 +1,4 @@
+import Categoria from "../components/Categoria-Destaque";
 import Destaque from "../components/Collection-Destaque";
 import Gallery from "../components/Gallery";
 import { Section } from "../components/Section";
@@ -20,6 +21,8 @@ const HomePage = () => {
             />
 
             <Destaque/>
+
+            <Categoria/>
 
             <SpecialOffer />
         </>
