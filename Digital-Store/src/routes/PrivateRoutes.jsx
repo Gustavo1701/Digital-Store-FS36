@@ -11,6 +11,7 @@ import NotFoundPage from "../Pages/NotFoundPage";
 import { Teste } from "../Pages/Teste";
 import ProductListingPage from "../Pages/ProductListingPage";
 import { ProductDetails } from "../components/ProductDetails";
+import LoginForm from "../Pages/LoginPage";
 
 export const PrivateRoutes = () => {
   return (
@@ -19,6 +20,7 @@ export const PrivateRoutes = () => {
         {/* Login and Register */}
         <Route element={<SimpleLayout />}>
           <Route path="/register" element={<CreateAccountPage />} />
+          <Route path="/login" element={<LoginForm />} />
         </Route>
         {/* Pages WebApp */}
         <Route element={<Layout />}>

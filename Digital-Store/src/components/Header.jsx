@@ -109,7 +109,7 @@ export default Header;
 
 export const SimpleHeader = () => {
   return (
-    <header className="w-full flex pl-36 align-middle h-24">
+    <header className="w-full bg-white flex pl-36 align-middle h-24">
       <Link className="flex items-center  gap-1" to={"/"}>
         <img src={iconLogo} alt="Ícone da Marca" />
         <img className="mt-1.5" src={logo} alt="Logo da Marca" />
