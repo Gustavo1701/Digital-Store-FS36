@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import { ProductCard } from "./ProductCard";
 import { useEffect, useState } from "react";
-import { apiURL } from "../util/instanceApi";
 import { Loading } from "../util/Loading";
-import axios from "axios";
+import { getProductById } from "../api/productService";
 
 export const ProductDetails = () => {
   const { id } = useParams();
@@ -14,8 +13,8 @@ export const ProductDetails = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true)
-        const response = await axios.get(`${apiURL}/${id}`);
-        setProduct(response.data);
+        const response = await getProductById(id);
+        setProduct(response);
       } catch (error) {
         console.log("Erro ao buscar o produto");
       } finally {

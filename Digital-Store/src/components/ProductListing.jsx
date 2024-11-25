@@ -1,10 +1,10 @@
-import axios from "axios";
 import { ProductCard } from "./ProductCard";
 import { useEffect, useState } from "react";
 import { formatCurrency } from "../util/FormatToBRL";
 import { Loading } from "../util/Loading";
 import { useNavigate } from "react-router-dom";
-import { apiURL } from "../util/instanceApi";
+
+import { getAllProducts } from "../api/productService";
 
 export const ProductListing = () => {
   const [data, setData] = useState([]);
@@ -13,9 +13,9 @@ export const ProductListing = () => {
   const fetchProducts = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${apiURL}`);
-      console.log(response.data);
-      setData(response.data);
+      const res = await getAllProducts();
+      console.log(res);
+      setData(res);
     } catch (error) {
       console.log("Erro ao ao buscar os produtos");
     } finally {
@@ -28,7 +28,7 @@ export const ProductListing = () => {
   }, []);
 
   const handleSelectProduct = (id) => {
-    navigate(`/product/${id}`);
+    navigate(`/produto/${id}`);
   }
   return (
     <div className="container mx-auto">

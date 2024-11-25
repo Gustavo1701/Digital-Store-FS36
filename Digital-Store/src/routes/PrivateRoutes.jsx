@@ -25,7 +25,7 @@ export const PrivateRoutes = () => {
           <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/produtos" element={<ProductListingPage />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/produto/:id" element={<ProductDetails />} />
           <Route path="/register" element={<CreateAccountPage />} />
         </Route>
         {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
