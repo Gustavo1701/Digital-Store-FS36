@@ -20,4 +20,8 @@
     --light-gray-3: #F5F5F5;
     --white: #FFFFFF;
   }
+
+  body {
+    background-color: #f9f8fe;
+  }
   
