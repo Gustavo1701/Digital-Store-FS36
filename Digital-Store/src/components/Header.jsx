@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <header>
-      <div className="w-full h-[190px] flex justify-center py-6  gap-8">
+      <div className="w-full h-[190px] flex justify-center py-6 bg-white gap-8">
         <div className="w-[70%]">
           <div className="flex justify-center items-center gap-8 px-4">
             {/* Logo Section */}
