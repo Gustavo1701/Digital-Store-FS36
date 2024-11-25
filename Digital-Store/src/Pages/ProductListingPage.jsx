@@ -1,11 +1,7 @@
-import { useState } from "react";
 import { ProductListing } from "../components/ProductListing";
 
 const ProductListingPage = () => {
-  const [selectedOption, setSelectedOption] = useState("Maior preço");
-  const handleSelection = (option) => {
-    setSelectedOption(option);
-  };
+
   return (
     <div className="container mx-auto">
       <div className="flex justify-end">
@@ -18,7 +14,7 @@ const ProductListingPage = () => {
             </label>
             <select
               id="order"
-              className="text-black flex-1 border-none  bg-transparent"
+              className="text-black flex-1 border-none bg-transparent"
             >
               <option value="menor-preco">Menor preço</option>
               <option value="maior-preco">Maior preço</option>
