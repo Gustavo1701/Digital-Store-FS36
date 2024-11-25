@@ -1,6 +1,7 @@
 import axios from "axios";
 import { ProductCard } from "./ProductCard";
 import { useEffect, useState } from "react";
+import { formatCurrency } from "../util/FormatToBRL";
 
 export const ProductListing = () => {
     const [data, setData] = useState([])
@@ -25,8 +26,8 @@ export const ProductListing = () => {
         category={product.category}
         name={product.title}
         img={product.image}
-        price={product.price}
-        priceDiscount={product.price}
+        price={formatCurrency(product.price)}
+        priceDiscount={formatCurrency(product.price)}
         id={product.id}
         />
     ))}
