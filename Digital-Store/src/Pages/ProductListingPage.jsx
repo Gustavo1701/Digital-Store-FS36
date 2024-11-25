@@ -16,7 +16,7 @@ const ProductListingPage = () => {
             </label>
             <select
               id="order"
-              className="text-black flex-1 border-none bg-transparent"
+              className="text-black flex-1 focus:ring-0 border-none bg-transparent"
             >
               <option value="menor-preco">Menor preço</option>
               <option value="maior-preco">Maior preço</option>

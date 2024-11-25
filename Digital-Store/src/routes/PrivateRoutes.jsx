@@ -9,8 +9,8 @@ import Layout, { SimpleLayout } from "../components/Layout";
 import { CreateAccountPage } from "../Pages/CreateAccountPage";
 import NotFoundPage from "../Pages/NotFoundPage";
 import { Teste } from "../Pages/Teste";
-import { ProductListing } from "../components/ProductListing";
 import ProductListingPage from "../Pages/ProductListingPage";
+import { ProductDetails } from "../components/ProductDetails";
 
 export const PrivateRoutes = () => {
   return (
@@ -25,6 +25,7 @@ export const PrivateRoutes = () => {
           <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/produtos" element={<ProductListingPage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/register" element={<CreateAccountPage />} />
         </Route>
         {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
