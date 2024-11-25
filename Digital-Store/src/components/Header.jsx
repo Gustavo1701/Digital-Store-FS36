@@ -51,7 +51,7 @@ const Header = () => {
                     className={`mt-1 border-b ${
                       isActive("/home")
                         ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
-                        : "border-white"
+                        : "border-none"
                     }`}
                   >Home</div>
                 </Link>
@@ -62,7 +62,7 @@ const Header = () => {
                     className={`mt-1 border-b ${
                       isActive("/produtos")
                         ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
-                        : "border-white"
+                        : "border-none"
                     }`}
                   >Produtos</div>
                 </Link>
@@ -73,7 +73,7 @@ const Header = () => {
                     className={`mt-1 border-b ${
                       isActive("/categorias")
                         ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
-                        : "border-white"
+                        : "border-none"
                     }`}
                   >Categorias</div>
                 </Link>
@@ -84,7 +84,7 @@ const Header = () => {
                     className={`mt-1 border-b ${
                       isActive("/meus-pedidos")
                         ? "border-[var(--primary)] border-b-2 font-semibold text-[var(--primary)]"
-                        : "border-white"
+                        : "border-none"
                     }`}
                   >Meus Pedidos</div>
                 </Link>
