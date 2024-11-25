@@ -25,11 +25,12 @@ export const ProductListing = () => {
     fetchProducts();
   }, []);
   return (
-    <div className="flex flex-wrap gap-4">
+    <div className="container mx-auto">
       {loading ? (
-        <Loading label={"Carregando produtos..."}/>
+        <Loading label={"Carregando produtos..."} />
       ) : (
-        data.map((product, index) => (
+        <div className="flex flex-wrap gap-4">
+          {data.map((product, index) => (
           <ProductCard
             key={index}
             category={product.category}
@@ -39,7 +40,8 @@ export const ProductListing = () => {
             priceDiscount={formatCurrency(product.price)}
             id={product.id}
           />
-        ))
+          ))}
+        </div>
       )}
     </div>
   );

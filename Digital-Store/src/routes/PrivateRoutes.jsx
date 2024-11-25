@@ -10,6 +10,7 @@ import { CreateAccountPage } from "../Pages/CreateAccountPage";
 import NotFoundPage from "../Pages/NotFoundPage";
 import { Teste } from "../Pages/Teste";
 import { ProductListing } from "../components/ProductListing";
+import ProductListingPage from "../Pages/ProductListingPage";
 
 export const PrivateRoutes = () => {
   return (
@@ -23,7 +24,7 @@ export const PrivateRoutes = () => {
         <Route element={<Layout />}>
           <Route path="/" element={<Navigate to={"/home"} />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="/produtos" element={<ProductListing />} />
+          <Route path="/produtos" element={<ProductListingPage />} />
           <Route path="/register" element={<CreateAccountPage />} />
         </Route>
         {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
