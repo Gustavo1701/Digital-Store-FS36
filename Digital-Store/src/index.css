@@ -9,6 +9,7 @@
     --error: #EE4266;
     --success: #52CA76;
     --warning: #F6AA1C;
+    --destaque: #E7FF86;
   
     /* Grayscale */
     --dark-gray: #1F1F1F;
@@ -18,5 +19,9 @@
     --light-gray-2: #CCCCCC;
     --light-gray-3: #F5F5F5;
     --white: #FFFFFF;
+  }
+
+  body {
+    background-color: #f9f8fe;
   }
   

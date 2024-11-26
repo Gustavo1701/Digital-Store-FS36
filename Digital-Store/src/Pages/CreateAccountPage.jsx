@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 import { Section } from "../components/Section";
@@ -8,6 +8,7 @@ export const CreateAccountPage = () => {
     name: "",
     cpf: "",
     email: "",
+    password: "",
     tel: "",
     adrress: "",
     neighborhood: "",
@@ -27,10 +28,11 @@ export const CreateAccountPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Dados do formulário", formData);
-    setFormData({
+        setFormData({
       name: "",
       cpf: "",
       email: "",
+      password: "",
       tel: "",
       adrress: "",
       neighborhood: "",
@@ -49,9 +51,9 @@ export const CreateAccountPage = () => {
           <Section
             title={"Informações Pessoais"}
             titleSize="text-lg"
-            className={" bg-white w-full px-4 py-5"}
+            className={" bg-white w-full px-4 py-2 mt-5"}
           >
-            <div className="border border-solid border-gray-300"></div>
+            <div className="border border-solid my-5 border-gray-300"></div>
             <Input
               type="text"
               labelSize="text-xs font-bold"
@@ -83,6 +85,16 @@ export const CreateAccountPage = () => {
               onChange={handleChange}
             />
             <Input
+              type="password"
+              labelSize="text-xs font-bold"
+              id={"password"}
+              name={"password"}
+              label={"Senha *"}
+              placeholder={"Insira sua senha"}
+              value={formData.password}
+              onChange={handleChange}
+            />
+            <Input
               type="tel"
               labelSize="text-xs font-bold"
               id={"Celular"}
@@ -96,9 +108,9 @@ export const CreateAccountPage = () => {
           <Section
             title={"Informações de Entrega"}
             titleSize="text-lg"
-            className={" bg-white w-full px-4 py-5"}
+            className={" bg-white w-full px-4 py-4"}
           >
-            <div className="border border-solid border-gray-300"></div>
+            <div className="border border-solid my-5 border-gray-300"></div>
             <Input
               type="text"
               labelSize="text-xs font-bold"
@@ -153,7 +165,7 @@ export const CreateAccountPage = () => {
           <div className="flex mt-2">
             <span>
               <input
-                className="w-5 h-5 mr-2 align-middle"
+                className="w-5 h-5 mr-2 align-middle focus:ring-0 text-[var(--primary)]"
                 type="checkbox"
                 name="accept"
                 id="accept"
