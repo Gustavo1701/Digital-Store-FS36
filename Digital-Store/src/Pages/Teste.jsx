@@ -6,7 +6,6 @@ import search from '../assets/Search.png'
 import buy from '../assets/Buy.png'
 
 import Gallery from '../components/Gallery.jsx'
-
 export const Teste = () => {
 
     const [menuOpen, setMenuOpen] = useState(false);
