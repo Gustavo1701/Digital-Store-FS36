@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { Input } from '../components/Input'; // Importe o seu componente de Input
 import { Button } from '../components/Button'; // Importe o seu componente de Button
@@ -17,6 +17,7 @@ const LoginForm = () => {
   const handleSenhaChange = (e) => {
     setSenha(e.target.value);
   };
+
 
   return (
     <main className='bg-gradient-to-b flex justify-center w-full h-screen from-indigo-400 via-indigo-300 to-indigo-200'>
