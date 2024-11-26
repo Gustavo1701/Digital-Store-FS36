@@ -6,7 +6,13 @@ export default {
     "./node_modules/flowbite/**/*.js"
   ],
   theme: {
-    extend: {},
+    extend: {
+      rotate: {
+        '165': '165deg', // Rotação de 30°
+        '159': '159deg', // Rotação de 135°
+        '-60': '-60deg', // Rotação de -60° (anti-horário)
+      },
+    },
   },
   plugins: [
     require('flowbite/plugin')
