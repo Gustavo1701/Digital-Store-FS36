@@ -12,6 +12,7 @@ import { Teste } from "../Pages/Teste";
 import ProductListingPage from "../Pages/ProductListingPage";
 import { ProductDetails } from "../components/ProductDetails";
 import LoginForm from "../Pages/LoginPage";
+import { ProfileUser } from "../Pages/ProfileUser";
 
 export const PrivateRoutes = () => {
   return (
@@ -27,6 +28,7 @@ export const PrivateRoutes = () => {
           <Route element={<Layout />}>
             <Route path="/" element={<Navigate to={"/home"} />} />
             <Route path="/home" element={<HomePage />} />
+            <Route path="/profile" element={<ProfileUser />} />
             <Route path="/produtos" element={<ProductListingPage />} />
             <Route path="/produto/:id" element={<ProductDetails />} />
             <Route path="/register" element={<CreateAccountPage />} />

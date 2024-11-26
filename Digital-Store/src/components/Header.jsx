@@ -123,7 +123,9 @@ const Header = () => {
         </span>
         {auth ? (
           <div className="flex gap-2 mt-5">
-            <FiUser size={24} color="var(--primary)"/>
+            <Link to={"/profile"}>
+              <FiUser size={24} color="var(--primary)"/>
+            </Link>
             <p>Olá Admin</p>
           </div>
         ) : (
