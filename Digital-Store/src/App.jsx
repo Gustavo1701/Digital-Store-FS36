@@ -3,7 +3,7 @@ import './App.css'
 import { PrivateRoutes } from './routes/PrivateRoutes'
 import { AuthContext } from './context/AuthContext'
 import { PublicRoutes } from './routes/PublicRoutes'
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 function App() {
@@ -11,7 +11,9 @@ function App() {
   console.log(auth);
   return (
     
-     auth ? <PrivateRoutes/> : <PublicRoutes/>
+     <Router>
+      {auth ? <PrivateRoutes/> : <PublicRoutes/>}
+    </Router>
     
   )
 }

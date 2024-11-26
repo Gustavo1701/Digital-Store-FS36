@@ -16,17 +16,15 @@ import { ProfileUser } from "../Pages/ProfileUser";
 
 export const PrivateRoutes = () => {
   return (
-
-      <Router>
         <Routes>
           {/* Login and Register */}
-          {/* <Route element={<SimpleLayout />}>
+          <Route element={<SimpleLayout />}>
             <Route path="/register" element={<CreateAccountPage />} />
             <Route path="/login" element={<LoginForm />} />
-          </Route> */}
+          </Route>
           {/* Pages WebApp */}
           <Route element={<Layout />}>
-            <Route path="/" element={<Navigate to={"/home"} />} />
+            <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
             <Route path="/profile" element={<ProfileUser />} />
             <Route path="/produtos" element={<ProductListingPage />} />
@@ -40,6 +38,10 @@ export const PrivateRoutes = () => {
           {/* Rota de testes */}
           <Route path="/teste" element={<Teste />} />
         </Routes>
-      </Router>
   );
 };
+
+
+
+
+

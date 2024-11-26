@@ -5,7 +5,6 @@ import LoginForm from "../Pages/LoginPage";
 
 export const PublicRoutes = () => {
   return (
-    <Router>
       <Routes>
         <Route element={<SimpleLayout />}>
           <Route path="/register" element={<CreateAccountPage />} />
@@ -17,6 +16,5 @@ export const PublicRoutes = () => {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
-    </Router>
   );
 };

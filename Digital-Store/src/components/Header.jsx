@@ -14,6 +14,7 @@ const Header = () => {
   const logout = () => {
     if(auth) {
       setAuth(false)
+      localStorage.removeItem("auth");
     }
   }
 
