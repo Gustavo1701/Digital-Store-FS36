@@ -1,10 +1,9 @@
-import whiteTenis from "../assets/White-Sneakers-PNG-Clipart.png";
-import Title from "./Title";
+import whiteTenis from "../assets/img/TenisBrancoBanner.png";
 
 function FeaturedBanner() {
   return (
     <>
-      <section className="container mx-auto mb-24 p-2 flex-wrap-reverse  flex justify-center items-center">
+      <section className="container mx-auto mb-24 p-2 flex-wrap-reverse  flex justify-center items-center bg-gray-100">
         <div className="flex flex-col text-center lg:text-left  items-center md:items-start max-w-[510px] gap-y-8 lg:gap-y-4">
           <span className=" text-[var(--primary)] lg:text-[var(--warning)] leading-[24px] tracking-[.75px] font-inter text-[16px] font-[700]">
             Melhores ofertas personalizadas
