@@ -6,7 +6,7 @@ export const Teste = () => {
         <>
             <h1>Teste</h1>
             
-            <Destaque/>
+            <Destaque/> 
             
         </>
      );

@@ -1,6 +1,7 @@
 import Gallery from "../components/Gallery";
 import { Section } from "../components/Section";
 import SpecialOffer from "../components/SpecialOffer";
+import Destaque from "../components/Collection-Destaque";
 
 const HomePage = () => {
     return (
@@ -22,7 +23,7 @@ const HomePage = () => {
                     '../public/home-slide-8.jpeg',
                 ]}
             />
-
+            <Destaque />
             <SpecialOffer />
         </>
     );
