@@ -1,12 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { Input } from '../components/Input'; // Importe o seu componente de Input
 import { Button } from '../components/Button'; // Importe o seu componente de Button
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import loginBg from '../../public/login-bg.png'
 import loginBg2 from '../../public/login-bg-2.png'
+import { AuthContext } from '../context/AuthContext';
 
 const LoginForm = () => {
+  const {setAuth} = useContext(AuthContext)
+  const navigate = useNavigate()
   const [login, setLogin] = useState('');
   const [senha, setSenha] = useState('');
 
@@ -18,11 +21,18 @@ const LoginForm = () => {
     setSenha(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    if(login === "admin@admin.com" && senha === "123") {
+      setAuth(true)
+      navigate("/home")
+    }
+  }
 
   return (
     <main className='bg-gradient-to-b flex justify-center w-full h-screen from-indigo-400 via-indigo-300 to-indigo-200'>
       <div className="flex mt-32">
-        <div className="bg-white p-8 w-[583px] h-fit shadow-lg">
+        <form onSubmit={handleSubmit} className="bg-white p-8 w-[583px] h-fit shadow-lg">
           <h2 className="text-2xl font-semibold mb-4">Acesse sua conta</h2>
           <p className="text-sm mb-6">
             Novo Cliente? Então registre-se{' '}
@@ -33,6 +43,7 @@ const LoginForm = () => {
             <Input
               id="login"
               label="Login *"
+              type='email'
               value={login}
               onChange={handleLoginChange}
               placeholder="Digite seu login"
@@ -79,7 +90,7 @@ const LoginForm = () => {
               <FaFacebook size={24} />
             </a>
           </div>
-        </div>
+        </form>
           <div className='flex'>
             <img src={loginBg} alt="" className='h-[453px] hidden md:block' />
             <img src={loginBg2} alt="" className='mt-32 h-[515px] hidden md:block'/>

@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 import { Section } from "../components/Section";
@@ -28,7 +28,7 @@ export const CreateAccountPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Dados do formulário", formData);
-    setFormData({
+        setFormData({
       name: "",
       cpf: "",
       email: "",

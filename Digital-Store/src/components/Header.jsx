@@ -4,8 +4,20 @@ import iconLogo from "../assets/vector.png";
 import search from "../assets/Search.png";
 import buy from "../assets/Buy.png";
 import { Logo } from "./Logo";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
+import { FiUser } from "react-icons/fi";
+
 
 const Header = () => {
+  const {auth, setAuth} = useContext(AuthContext)
+
+  const logout = () => {
+    if(auth) {
+      setAuth(false)
+    }
+  }
+
   const location = useLocation();
 
   // Função para verificar se a rota está ativa
@@ -36,9 +48,13 @@ const Header = () => {
               />
             </div>
             {/* Register Link */}
-            <Link className="underline" to={"/register"}>
+            {auth ? (
+              ""
+            ) : (
+              <Link className="underline" to={"/register"}>
               Cadastre-se
-            </Link>
+              </Link>
+            )}
           </div>
 
           {/* Navigations Links */}
@@ -94,15 +110,29 @@ const Header = () => {
         </div>
 
         {/* Login Button and Cart Icon */}
-        <Link to={"/login"}>
+        {auth ? (
+          ""
+        ): (
+          <Link to={"/login"}>
           <button className="w-36 h-10 mt-2 text-white rounded-lg bg-[var(--primary)]">
             Entrar
           </button>
         </Link>
+        )}
         <span className="mt-4">
           <img src={buy} alt="Ícone de Carrinho de Compras" />
         </span>
+        <button className="underline mb-20" onClick={logout}>Logout</button>
+        {auth ? (
+          <div className="flex gap-2 mt-5">
+            <FiUser size={24} color="var(--primary)"/>
+            <p>Olá Admin</p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
+      
     </header>
   );
 };
