@@ -3,7 +3,6 @@ import logo from "../assets/logo.png";
 import iconLogo from "../assets/vector.png";
 import search from "../assets/Search.png";
 import buy from "../assets/Buy.png";
-import { Logo } from "./Logo";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { FiUser } from "react-icons/fi";
@@ -122,7 +121,6 @@ const Header = () => {
         <span className="mt-4">
           <img src={buy} alt="Ícone de Carrinho de Compras" />
         </span>
-        <button className="underline mb-20" onClick={logout}>Logout</button>
         {auth ? (
           <div className="flex gap-2 mt-5">
             <FiUser size={24} color="var(--primary)"/>
@@ -131,6 +129,8 @@ const Header = () => {
         ) : (
           ""
         )}
+        <button className="underline mb-20" onClick={logout}>Logout</button>
+        
       </div>
       
     </header>
