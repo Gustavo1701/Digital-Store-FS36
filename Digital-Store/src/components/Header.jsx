@@ -94,9 +94,11 @@ const Header = () => {
         </div>
 
         {/* Login Button and Cart Icon */}
-        <button className="w-36 h-10 mt-2 text-white rounded-lg bg-[var(--primary)]">
-          Entrar
-        </button>
+        <Link to={"/login"}>
+          <button className="w-36 h-10 mt-2 text-white rounded-lg bg-[var(--primary)]">
+            Entrar
+          </button>
+        </Link>
         <span className="mt-4">
           <img src={buy} alt="Ícone de Carrinho de Compras" />
         </span>
