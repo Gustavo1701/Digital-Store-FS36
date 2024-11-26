@@ -80,8 +80,8 @@ const LoginForm = () => {
           </div>
         </div>
           <div className='flex'>
-            <img src={loginBg} alt="" className='h-[453px]' />
-            <img src={loginBg2} alt="" className='mt-32 h-[515px]'/>
+            <img src={loginBg} alt="" className='h-[453px] hidden md:block' />
+            <img src={loginBg2} alt="" className='mt-32 h-[515px] hidden md:block'/>
           </div>
       </div>
     </main>
