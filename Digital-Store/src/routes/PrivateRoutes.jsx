@@ -27,7 +27,7 @@ export const PrivateRoutes = () => {
           <Route element={<Layout />}>
             <Route path="/" element={<HomePage />} />
             <Route path="/home" element={<HomePage />} />
-            <Route path="/profile" element={<CadastroProduto />} />
+            <Route path="/profile" element={<ProfileUser />} />
             <Route path="/produtos" element={<ProductListingPage />} />
             <Route path="/produto/:id" element={<ProductDetails />} />
             <Route path="/register" element={<CreateAccountPage />} />

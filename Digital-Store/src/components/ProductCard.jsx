@@ -8,7 +8,7 @@ export const ProductCard = ({name, img, id, price, priceDiscount, description, c
                 {/* Category */}
                 <span className="text-xs font-bold text-[var(--light-gray)]">{category}</span>
                 {/* Title */}
-                <p className="text-2xl text-[var(--dark-gray-2)] line-clamp-2">{name}</p>
+                <p className="text-2xl text-[var(--dark-gray-2)] line-clamp-1">{name}</p>
                 {/* Price and Price Discount */}
                 <div>
                     <span className="text-[var(--light-gray)] line-through text-2xl mr-2">{price}</span>
