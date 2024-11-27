@@ -64,7 +64,7 @@ export const ProfileUser = () => {
       <Section title={"Informações de Entrega"}>
         <ul className="mt-[-12px] space-y-2">
         {personOptions.map((label, index) => {
-            const field = ["endereco", "cidade", "bairro", "cep"][index]; // Campos pessoais
+            const field = ["endereco", "cidade", "bairro", "cep"][index]; //Campos de Entrega
             return (
               <li key={index} className="flex items-center gap-1">
                 <span className="text-[var(--light-gray)]">{label}</span>
