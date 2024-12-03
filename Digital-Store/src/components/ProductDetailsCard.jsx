@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Gallery from "./Gallery";
+import { TbStar } from "react-icons/tb";import Gallery from "./Gallery";
 export const ProductDetailsCard = ({
   name,
   category,
@@ -50,11 +50,11 @@ export const ProductDetailsCard = ({
         </p>
         <div className="flex items-center mt-2">
           <div className="flex items-center gap-1">
-            <i className="bi bi-star text-[var(--warning)]"></i>
-            <i className="bi bi-star text-[var(--warning)]"></i>
-            <i className="bi bi-star text-[var(--warning)]"></i>
-            <i className="bi bi-star text-[var(--warning)]"></i>
-            <i className="bi bi-star text-[var(--warning)]"></i>
+            <TbStar size={24} cursor={"pointer"} stroke="gray" className="fill-transparent hover:fill-[var(--warning)]"/>
+            <TbStar size={24} cursor={"pointer"} stroke="gray" className="fill-transparent hover:fill-[var(--warning)]"/>
+            <TbStar size={24} cursor={"pointer"} stroke="gray" className="fill-transparent hover:fill-[var(--warning)]"/>
+            <TbStar size={24} cursor={"pointer"} stroke="gray" className="fill-transparent hover:fill-[var(--warning)]"/>
+            <TbStar size={24} cursor={"pointer"} stroke="gray" className="fill-transparent hover:fill-[var(--warning)]"/>
           </div>
           <span className="ml-2 text-[var(--warning)] font-medium">
             {rating}

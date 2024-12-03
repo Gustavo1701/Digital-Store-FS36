@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Loading } from "../util/Loading";
 import { getProductById } from "../api/productService";
 import { ProductDetailsCard } from "./ProductDetailsCard";
+import { formatCurrency } from "../util/FormatToBRL";
+
 
 export const ProductDetails = () => {
   const { id } = useParams();
@@ -41,8 +43,8 @@ export const ProductDetails = () => {
       category={product.category}
       description={product.description}
       id={product.id}
-      price={product.price}
-      priceDiscount={product.price}
+      price={formatCurrency(product.price)}
+      priceDiscount={formatCurrency(product.price)}
       img={product.image}
       />
     </div>
