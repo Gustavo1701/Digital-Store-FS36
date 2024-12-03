@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { ProductCard } from "./ProductCard";
 import { useEffect, useState } from "react";
 import { Loading } from "../util/Loading";
 import { getProductById } from "../api/productService";
+import { ProductDetailsCard } from "./ProductDetailsCard";
 
 export const ProductDetails = () => {
   const { id } = useParams();
@@ -35,14 +35,15 @@ export const ProductDetails = () => {
   
   return (
     <div>
-      <ProductCard 
+      <ProductDetailsCard
       name={product.title}
+      rating={product.rating.rate}
       category={product.category}
-      id={id}
-      img={product.image}
+      description={product.description}
+      id={product.id}
       price={product.price}
       priceDiscount={product.price}
-      description={product.description}
+      img={product.image}
       />
     </div>
   );
