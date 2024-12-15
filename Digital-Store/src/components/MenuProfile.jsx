@@ -21,9 +21,7 @@ export const MenuProfile = () => {
           <li className="text-[var(--dark-gray)] border-b border-gray-300 py-3 flex justify-between items-center">
             <NavLink to={"/minhas-informacoes"} className={({ isActive }) => isActive ? 'text-[var(--primary)] font-bold' : ''}>Minhas Informações</NavLink>
           </li>
-          <li className="text-[var(--dark-gray)]  py-3 flex justify-between items-center">
-            <NavLink to={"/metodos-de-pagamento"} className={({ isActive }) => isActive ? 'text-[var(--primary)] font-bold' : ''}>Métodos de Pagamento</NavLink>
-          </li>
+          
         </ul>
       </section>
     </>
