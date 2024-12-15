@@ -1,4 +1,5 @@
-import { MenuProfile } from "../components/MenuProfile";
+import MenuProfile from "../components/MenuProfile";
+import Produtos from "../database/Produtos"
 
 const MyOrders = () => {
   return (
@@ -13,7 +14,7 @@ const MyOrders = () => {
             </tr>
           </thead>
           <tbody>
-            {ProductItens.map((p, i) => (
+            {Produtos.map((p, i) => (
               <tr key={i} className="border-b">
               <td className="text-left p-4 flex items-center gap-2">
                 <img src={p.image[0]} alt="" style={{maxWidth: "55px" }} />

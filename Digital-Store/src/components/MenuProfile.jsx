@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 
-export const MenuProfile = () => {
+const MenuProfile = () => {
   const location = useLocation(); 
 
   const isActive = (path) => {
@@ -29,3 +29,5 @@ export const MenuProfile = () => {
     </>
   );
 };
+
+export default MenuProfile;
