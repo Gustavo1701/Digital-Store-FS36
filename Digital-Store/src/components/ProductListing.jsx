@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 import { getAllProducts } from "../api/productService";
 
-export const ProductListing = () => {
+export const ProductListing = ({ quantity }) => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
@@ -16,6 +16,7 @@ export const ProductListing = () => {
       const res = await getAllProducts();
       console.log(res);
       setData(res);
+      quantity(res.length)
     } catch (error) {
       console.log("Erro ao ao buscar os produtos");
     } finally {
