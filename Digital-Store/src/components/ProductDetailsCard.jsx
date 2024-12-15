@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { TbStar } from "react-icons/tb";import Gallery from "./Gallery";
+import { TbStar } from "react-icons/tb";
+import Gallery from "./Gallery";
 export const ProductDetailsCard = ({
   name,
   category,
