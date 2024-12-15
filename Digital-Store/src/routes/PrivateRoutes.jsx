@@ -14,6 +14,7 @@ import { ProductDetails } from "../components/ProductDetails";
 import LoginForm from "../Pages/LoginPage";
 import { ProfileUser } from "../Pages/ProfileUser";
 import CadastroProduto from "../Pages/CadastroProduto";
+import MyOrders from "../Pages/MyOrders";
 
 export const PrivateRoutes = () => {
   return (
@@ -29,6 +30,7 @@ export const PrivateRoutes = () => {
             <Route path="/home" element={<HomePage />} />
             <Route path="/profile" element={<ProfileUser />} />
             <Route path="/produtos" element={<ProductListingPage />} />
+            <Route path="/meuspedidos" element={<MyOrders />} />
             <Route path="/produto/:id" element={<ProductDetails />} />
             <Route path="/register" element={<CreateAccountPage />} />
           </Route>
