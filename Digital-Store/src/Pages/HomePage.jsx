@@ -27,6 +27,8 @@ const HomePage = () => {
             <Categoria/>
 
             <SpecialOffer />
+
+            
         </>
     );
 }
