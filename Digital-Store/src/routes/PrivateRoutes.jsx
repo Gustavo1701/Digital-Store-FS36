@@ -1,9 +1,4 @@
-import {
-  Route,
-  BrowserRouter as Router,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { Route, BrowserRouter as  Routes } from "react-router-dom";
 import HomePage from "../Pages/HomePage";
 import Layout, { SimpleLayout } from "../components/Layout";
 import { CreateAccountPage } from "../Pages/CreateAccountPage";
@@ -13,7 +8,6 @@ import ProductListingPage from "../Pages/ProductListingPage";
 import { ProductDetails } from "../components/ProductDetails";
 import LoginForm from "../Pages/LoginPage";
 import { ProfileUser } from "../Pages/ProfileUser";
-import CadastroProduto from "../Pages/CadastroProduto";
 
 export const PrivateRoutes = () => {
   return (
