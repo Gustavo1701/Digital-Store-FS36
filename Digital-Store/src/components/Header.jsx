@@ -95,7 +95,7 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
+                <Link to={"/meuspedidos"} className="font-normal text-xl text-[var(--dark-gray)] hover:text-[var(--primary)]  ">
                   <div
                     className={`mt-1 border-b ${
                       isActive("/meus-pedidos")

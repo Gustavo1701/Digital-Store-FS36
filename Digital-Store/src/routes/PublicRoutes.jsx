@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes, Navigate } from "react-router-dom";
+import { Route, BrowserRouter as Routes, Navigate } from "react-router-dom";
 import { SimpleLayout } from "../components/Layout";
 import { CreateAccountPage } from "../Pages/CreateAccountPage";
 import LoginForm from "../Pages/LoginPage";
