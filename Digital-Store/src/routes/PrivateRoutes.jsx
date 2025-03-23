@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as  Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom"; // Adicionando Routes aqui
 import HomePage from "../Pages/HomePage";
 import Layout, { SimpleLayout } from "../components/Layout";
 import { CreateAccountPage } from "../Pages/CreateAccountPage";
@@ -10,35 +10,33 @@ import LoginForm from "../Pages/LoginPage";
 import { ProfileUser } from "../Pages/ProfileUser";
 import MyOrders from "../Pages/MyOrders";
 
-export const PrivateRoutes = () => {
+const PrivateRoutes = () => {
   return (
-        <Routes>
-          {/* Login and Register */}
-          <Route element={<SimpleLayout />}>
-            <Route path="/register" element={<CreateAccountPage />} />
-            <Route path="/login" element={<LoginForm />} />
-          </Route>
-          {/* Pages WebApp */}
-          <Route element={<Layout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/home" element={<HomePage />} />
-            <Route path="/profile" element={<ProfileUser />} />
-            <Route path="/produtos" element={<ProductListingPage />} />
-            <Route path="/meuspedidos" element={<MyOrders />} />
-            <Route path="/produto/:id" element={<ProductDetails />} />
-            <Route path="/register" element={<CreateAccountPage />} />
-          </Route>
+    <Routes> {/* Envolvendo as rotas com <Routes> */}
+      {/* Login and Register */}
+      <Route element={<SimpleLayout />}>
+        <Route path="/register" element={<CreateAccountPage />} />
+        <Route path="/login" element={<LoginForm />} />
+      </Route>
 
-          {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
-          <Route path="*" element={<NotFoundPage />} />
+      {/* Pages WebApp */}
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/profile" element={<ProfileUser />} />
+        <Route path="/produtos" element={<ProductListingPage />} />
+        <Route path="/meuspedidos" element={<MyOrders />} />
+        <Route path="/produto/:id" element={<ProductDetails />} />
+        <Route path="/register" element={<CreateAccountPage />} />
+      </Route>
 
-          {/* Rota de testes */}
-          <Route path="/teste" element={<Teste />} />
-        </Routes>
+      {/* Rota para qualquer URL inexistente seja redirecionada para a Home */}
+      <Route path="*" element={<NotFoundPage />} />
+
+      {/* Rota de testes */}
+      <Route path="/teste" element={<Teste />} />
+    </Routes>
   );
 };
 
-
-
-
-
+export default PrivateRoutes;

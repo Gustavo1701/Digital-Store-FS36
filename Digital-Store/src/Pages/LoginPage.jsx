@@ -1,14 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { FaGoogle, FaFacebook } from 'react-icons/fa';
 import { Input } from '../components/Input'; // Importe o seu componente de Input
 import { Button } from '../components/Button'; // Importe o seu componente de Button
 import { Link, useNavigate } from 'react-router-dom';
-import loginBg from '../../public/login-bg.png'
-import loginBg2 from '../../public/login-bg-2.png'
+// import loginBg from '../../public/login-bg.png'
+// import loginBg2 from '../../public/login-bg-2.png'
 import { AuthContext } from '../context/AuthContext';
 
 const LoginForm = () => {
-  const {setAuth} = useContext(AuthContext)
+  const { setAuth } = useContext(AuthContext)
   const navigate = useNavigate()
   const [login, setLogin] = useState('');
   const [senha, setSenha] = useState('');
@@ -23,7 +23,7 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    if(login === "admin@admin.com" && senha === "123") {
+    if (login === "admin@admin.com" && senha === "123") {
       setAuth(true)
       navigate("/home")
     }
@@ -91,10 +91,10 @@ const LoginForm = () => {
             </a>
           </div>
         </form>
-          <div className='flex'>
-            <img src={loginBg} alt="" className='h-[453px] hidden md:block' />
-            <img src={loginBg2} alt="" className='mt-32 h-[515px] hidden md:block'/>
-          </div>
+        <div className='flex'>
+          <img src="/login-bg.png" alt="" className='h-[453px] hidden md:block' />
+          <img src="/login-bg-2.png" alt="" className='mt-32 h-[515px] hidden md:block' />
+        </div>
       </div>
     </main>
   );
